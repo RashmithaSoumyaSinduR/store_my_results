@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ <meta charset="UTF-8">
+  <title>Department</title>
+  <link rel="stylesheet" href="department.css">
+  <style>
+    ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+       overflow: hidden;
+       background-color: #333;
+     }
+     
+     li {
+       float: left;
+       border-right:1px solid #bbb;
+     }
+     
+     li:last-child {
+       border-right: none;
+     }
+     
+     li a {
+       display: block;
+       color: white;
+       text-align: center;
+       padding: 14px 16px;
+       text-decoration: none;
+     }
+     
+     li a:hover:not(.active) {
+       background-color: #111;
+     }
+     
+     .active {
+       background-color: #04AA6D;
+     }
+   </style>
+</head>
+<body>
+  <ul>
+    <li><a class="active" href="menu.html">Home</a></li>
+    
+    <li><a href="subject.html">Subject</a></li>
+    <li><a href="retrieve_m.php"target=_blank>Download</a></li>
+    <li><a href="logout.php" >Logout</a></li>
+    <li style="float:right"><a class="active" href="team.html">About team</a></li>
+  </ul>
+  <marquee><h3><mark>Alert!!!</mark>Incase you have made wrong entry/entries of the data,delete <mark>all</mark> the marks of that semester and then enter your marks from the beginning.</h3></marquee>
+  <form action="department.php" method="POST">
+      <fieldset>
+   <h1> <mark><label for="department">DEPARTMENT:</label><br></mark>  </h2>  
+        <br></h1><h2>
+        <input type="radio" name="department" value="cse" checked>COMPUTER SCIENCE <br><br>
+        <input type="radio" name="department" value="ise">INFORMATION SCIENCE<br><br>
+        <input type="radio" name="department" value="tce">TELECOMMUNICATION<br><br>
+        <input type="radio" name="department" value="ece">ELECTRONICS<br><br>
+        <input type="radio" name="department" value="eee">ELECTRICAL<br><br>
+        <input type="radio" name="department" value="mee">MECHANICAL<br><br>
+        <input type="radio" name="department" value="civ">CIVIL<br><br>
+        <input type="radio" name="department" value="aut">AUTOMOBILE<br><br></h2>
+      </fieldset>
+      <fieldset>
+        <h1><mark><label for="scheme">SCHEME:</label></mark> </h1>     
+               <br><h2>
+               <input type="radio" name="scheme" value="15" checked> 2015 SCHEME<br><br>
+               <input type="radio" name="scheme" value="17">2017 SCHEME<br><br>
+               <input type="radio" name="scheme" value="18">2018 SCHEME<br> <br></h2>
+      </fieldset>   
+      <fieldset>
+     <h1><mark>  <label for="semester">SEMESTER:</label><br></mark></h1>   
+      
+        <br><h2>
+        <input type="radio" name="semester" value="1" checked>1ST SEM<br><br>
+        <input type="radio" name="semester" value="2">2ND SEM<br><br>
+        <input type="radio" name="semester" value="3">3RD SEM<br> <br>
+        <input type="radio" name="semester" value="4">4TH SEM<br><br>
+        <input type="radio" name="semester" value="5">5TH SEM<br><br>
+        <input type="radio" name="semester" value="6">6TH SEM<br><br>
+        <input type="radio" name="semester" value="7">7TH SEM<br><br>
+        <input type="radio" name="semester" value="8">8TH SEM<br><br></fieldset></h2>
+      </fieldset>
+      <marquee><h3><mark>Alert!!!</mark>Incase you have made wrong entry/entries of the data,delete <mark>all</mark> the marks of that semester and then enter your marks from the beginning.</h3></marquee>
+      <marquee><h3><mark>To delete your records,go to download page,enter your USN and semester and then submit,delete the records of the whole semester and make new entries of the data (or) click on the link below.</mark> </h3></marquee>
+    <center><a href="retrieve_m.php" value="Submit" style="font-size:20px">DELETE YOUR WRONGLY ENTERED RECORD</a><br><br></center>
+      <fieldset>
+     <legend>Your details</legend>
+     <label for="name">Name:</label>
+       <input type="text" id="name" name="name"><br><br>
+     <label for="usn">Enter your USN:</label>
+       <input type="text" id="usn" name="usn"><br><br>
+       <input type="submit" name="save" value="Submit" style="font-size:20px" autofocus>
+      <button type="reset" value="reset" style="font-size:20px">Reset</button>
+     </fieldset>
+    
+</form>
+<center><small>Your data wont be misused.</small></center>
+</body>
+
+</html>
